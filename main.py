@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-tokens= os.getenv("bottoken")
+tokens= os.getenv("6544499969:AAG3mut5yPd6oa4gqEPEl9JEypnMpSzDdqA")
 
 
 bot = telebot.TeleBot(tokens)
@@ -38,7 +38,7 @@ def callback_query(call):
         dl=bot.send_message(call.message.chat.id,"Downloading . . .")
         download(link,dlres)
         video = open('download.mp4','rb')
-        bot.send_video(call.message.chat.id,video)
+        bot.send_video(5497242163,video)
         bot.delete_message(call.message.chat.id,dl.id)
     if call.data == "360p":
         bot.delete_message(call.message.chat.id,call.message.message_id)
@@ -46,7 +46,7 @@ def callback_query(call):
         dl=bot.send_message(call.message.chat.id,"Downloading . . .")
         download(link,dlres)
         video = open('download.mp4','rb')
-        bot.send_video(call.message.chat.id,video)
+        bot.send_video(5497242163,video)
         bot.delete_message(call.message.chat.id,dl.id)
     return dlres
 
